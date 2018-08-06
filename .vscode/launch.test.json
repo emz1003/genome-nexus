@@ -1,0 +1,84 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "persistence",
+                "projectName": "persistence",
+                "workingDirectory": "/Users/emilyzhang/genome-nexus",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            },
+            {
+                "name": "service",
+                "projectName": "service",
+                "workingDirectory": "/Users/emilyzhang/genome-nexus",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            },
+            {
+                "name": "web",
+                "projectName": "web",
+                "workingDirectory": "/Users/emilyzhang/genome-nexus",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            },
+            {
+                "name": "model",
+                "projectName": "model",
+                "workingDirectory": "/Users/emilyzhang/genome-nexus",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "persistence",
+                "projectName": "persistence",
+                "workingDirectory": "/Users/emilyzhang/genome-nexus",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            },
+            {
+                "name": "service",
+                "projectName": "service",
+                "workingDirectory": "/Users/emilyzhang/genome-nexus",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            },
+            {
+                "name": "web",
+                "projectName": "web",
+                "workingDirectory": "/Users/emilyzhang/genome-nexus",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            },
+            {
+                "name": "model",
+                "projectName": "model",
+                "workingDirectory": "/Users/emilyzhang/genome-nexus",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}
