@@ -197,7 +197,7 @@ public class AnnotationController
     @RequestMapping(value = "/annotation/{variantId:.+}",
         method = RequestMethod.POST,
         produces = "application/json")
-    public List<VariantAnnotation> fetchVariantIdAnnotationPOST(
+    public List<VariantAnnotation> fetchVariantAnnotationByIdPOST(
         @ApiParam(value="List of variant IDs. For example [\"rs116035550\",\"COSM476\"])",
             required = true)
         @RequestBody List<String> variantIds,
@@ -208,15 +208,15 @@ public class AnnotationController
             "For example: hotspots, mutation_assessor", required = false, defaultValue = "hotspots,mutation_assessor")
         @RequestParam(required = false) List<String> fields)
     {
-        return this.variantAnnotationService.getAnnotations(variantIds, isoformOverrideSource, fields);
+        return this.variantAnnotationService.getAnnotationsByIds(variantIds, isoformOverrideSource, fields);
     }
 
-    @ApiOperation(value = "Retrieves VEP annotation for the provided list of variants",
+    @ApiOperation(value = "Retrieves VEP annotation for the provided variant ID",
         nickname = "fethcVAriantAnotationGET")
     @RequestMapping(value = "/annotation/{variantId:.+}",
         method = RequestMethod.GET,
         produces = "applicaton/json")
-    public VariantAnnotation fetchVariantIdAnnotationGET(
+    public VariantAnnotation fetchVariantAnnotationByIdGET(
         @ApiParam(value="Variant ID. For example rs116035550.",
             required = true)
         @PathVariable String variantId,
@@ -228,7 +228,6 @@ public class AnnotationController
         @RequestParam(required = false) List<String> fields)
         throws VariantAnnotationNotFoundException, VariantAnnotationWebServiceException
         {
-            return this.variantAnnotationService.getAnnotation(variantId, isoformOverrideSource, fields);
-        }
-    
+            return this.variantAnnotationService.getAnnotationById(variantId, isoformOverrideSource, fields);
+        }    
 }
