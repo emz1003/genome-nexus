@@ -4,40 +4,43 @@ import org.springframework.data.mongodb.core.mapping.Field;
 
 public class Vcf
 {
+
+    @Field(value = "alt")
     private String alt;
+
+    @Field(value = "position")
     private String position;
+
+    @Field(value = "ref")
     private String ref;
 
-    @Field(value="alt")
+
     public String getAlt()
     {
-      return alt;
+        return alt;
     }
 
     public void setAlt(String alt)
     {
-      this.alt = alt;
+        this.alt = alt;
     }
-
-    @Field(value= "position")
     public String getPosition()
     {
-      return position;
+        return position;
     }
 
     public void setPosition(String position)
     {
-      this.position = position;
+        this.position = position;
     }
-
-    @Field(value="ref")
     public String getRef()
     {
-      return ref;
+        return ref;
     }
 
     public void setRef(String ref)
     {
-      this.ref = ref;
+        this.ref = ref;
     }
+
 }

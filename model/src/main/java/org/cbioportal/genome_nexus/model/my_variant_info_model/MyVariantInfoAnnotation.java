@@ -1,24 +1,34 @@
 package org.cbioportal.genome_nexus.model.my_variant_info_model;
 
+import org.springframework.data.mongodb.core.mapping.Field;
 
+public class MyVariantInfoAnnotation
+{
 
-public class MyVariantInfoAnnotation {
-
+    @Field(value = "license")
     private String license;
+
+    @Field(value = "annotation")
     private MyVariantInfo annotation;
 
-    public MyVariantInfoAnnotation()
+
+    public String getLicense()
     {
-        this.license = "http://www.apache.org/licenses/LICENSE-2.0";
-        this.annotation = new MyVariantInfo();
+        return license;
     }
 
-    public void setLicense(String license) { this.license = license; }
+    public void setLicense(String license)
+    {
+        this.license = license;
+    }
+    public MyVariantInfo getAnnotation()
+    {
+        return annotation;
+    }
 
-    public String getLicense() { return this.license; }
-
-    public void setAnnotation(MyVariantInfo annotation) { this.annotation = annotation; }
-
-    public MyVariantInfo getAnnotation() { return this.annotation; }
+    public void setAnnotation(MyVariantInfo annotation)
+    {
+        this.annotation = annotation;
+    }
 
 }

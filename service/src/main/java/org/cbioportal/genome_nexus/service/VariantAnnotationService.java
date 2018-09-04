@@ -62,8 +62,7 @@ public interface VariantAnnotationService
 
     VariantAnnotation getAnnotationById(String variantId)
         throws VariantAnnotationNotFoundException, VariantAnnotationWebServiceException;
-    List<VariantAnnotation> getAnnotationsByIds(List<String> variantIds) 
-        throws VariantAnnotationNotFoundException;
+    List<VariantAnnotation> getAnnotationsByIds(List<String> variantIds);
     VariantAnnotation getAnnotationById(String variantId, String isoformOverrideSource, List<String> fields)
         throws VariantAnnotationWebServiceException, VariantAnnotationNotFoundException;
     List<VariantAnnotation> getAnnotationsByIds(List<String> variantIds, String isoformOverrideSource, List<String> fields);

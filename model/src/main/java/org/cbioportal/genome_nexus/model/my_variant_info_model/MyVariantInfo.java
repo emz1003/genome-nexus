@@ -1,106 +1,106 @@
 package org.cbioportal.genome_nexus.model.my_variant_info_model;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-@Document(collection = "my_variant_info.annotation")
 public class MyVariantInfo
 {
-    @Id
-    private String hgvs; // the hgvs id
+
+    @Field(value = "hgvs")
+    private String hgvs;
+
+    @Field(value = "version")
     private Integer version;
 
-    //private Snpeff snpeff;
+    @Field(value = "snpeff")
+    private Snpeff snpeff;
+
+    @Field(value = "vcf")
     private Vcf vcf;
+
+    @Field(value = "dbsnp")
     private Dbsnp dbsnp;
+
+    @Field(value = "cosmic")
     private Cosmic cosmic;
+
+    @Field(value = "clin_var")
     private ClinVar clinVar;
+
+    @Field(value = "mutdb")
     private Mutdb mutdb;
 
-    @Field(value="id")
+
     public String getHgvs()
     {
-      return hgvs;
+        return hgvs;
     }
 
     public void setHgvs(String hgvs)
     {
-      this.hgvs = hgvs;
+        this.hgvs = hgvs;
     }
-
-    @Field(value="version")
     public Integer getVersion()
     {
-      return version;
+        return version;
     }
 
     public void setVersion(Integer version)
     {
-      this.version = version;
+        this.version = version;
+    }
+    public Snpeff getSnpeff()
+    {
+        return snpeff;
     }
 
-    // @Field(value="snpeff")
-    // public Snpeff getSnpeff()
-    // {
-    //   return snpeff;
-    // }
-
-    // public void setSnpeff(Snpeff snpeff)
-    // {
-    //   this.snpeff = snpeff;
-    // }
-
-    @Field(value="vcf")
+    public void setSnpeff(Snpeff snpeff)
+    {
+        this.snpeff = snpeff;
+    }
     public Vcf getVcf()
     {
-      return vcf;
+        return vcf;
     }
 
     public void setVcf(Vcf vcf)
     {
-      this.vcf = vcf;
+        this.vcf = vcf;
+    }
+    public Dbsnp getDbsnp()
+    {
+        return dbsnp;
     }
 
-    @Field(value = "dbsnp")
-    public Dbsnp getDbsnp() 
+    public void setDbsnp(Dbsnp dbsnp)
     {
-      return dbsnp;
+        this.dbsnp = dbsnp;
+    }
+    public Cosmic getCosmic()
+    {
+        return cosmic;
     }
 
-    public void setDbsnp(Dbsnp dbsnp) 
+    public void setCosmic(Cosmic cosmic)
     {
-      this.dbsnp = dbsnp;
+        this.cosmic = cosmic;
     }
-    
-    @Field(value = "cosmic")
-    public Cosmic getCosmic() 
+    public ClinVar getClinVar()
     {
-      return cosmic;
+        return clinVar;
     }
 
-    public void setCosmic(Cosmic cosmic) 
+    public void setClinVar(ClinVar clinVar)
     {
-      this.cosmic = cosmic;
+        this.clinVar = clinVar;
     }
-    
-    @Field(value = "clinvar")
-    public ClinVar getClinVar() 
+    public Mutdb getMutdb()
     {
-      return clinVar;
+        return mutdb;
     }
 
-    public void setClinVar(ClinVar clinVar) 
+    public void setMutdb(Mutdb mutdb)
     {
-      this.clinVar = clinVar;
+        this.mutdb = mutdb;
     }
 
-      @Field(value = "mutdb")
-    public Mutdb getMutdb() {
-      return mutdb;
-    }
-
-    public void setMutdb(Mutdb mutdb) {
-      this.mutdb = mutdb;
-    }
 }

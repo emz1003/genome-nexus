@@ -2,27 +2,33 @@ package org.cbioportal.genome_nexus.model.my_variant_info_model;
 
 import org.springframework.data.mongodb.core.mapping.Field;
 
-
-public class Hg19 {
-    private Integer start;
-    private Integer end;
+public class Hg19
+{
 
     @Field(value = "start")
-    public Integer getStart() {
+    private Integer start;
+
+    @Field(value = "end")
+    private Integer end;
+
+
+    public Integer getStart()
+    {
         return start;
     }
 
-    public void setStart(Integer start) {
+    public void setStart(Integer start)
+    {
         this.start = start;
     }
-
-    @Field(value = "end")
-    public Integer getEnd() {
+    public Integer getEnd()
+    {
         return end;
     }
 
     public void setEnd(Integer end)
-	{
-		this.end = end;
-	}
+    {
+        this.end = end;
+    }
+
 }

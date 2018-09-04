@@ -212,7 +212,7 @@ public class AnnotationController
     }
 
     @ApiOperation(value = "Retrieves VEP annotation for the provided variant ID",
-        nickname = "fethcVAriantAnotationGET")
+        nickname = "fetchVariantAnnotationGET")
     @RequestMapping(value = "/annotation/{variantId:.+}",
         method = RequestMethod.GET,
         produces = "applicaton/json")
